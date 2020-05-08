@@ -44,7 +44,7 @@ public class Zoo<T extends Tier> implements Iterable<Tier> {
 					@Override
 					public int compare(Tier o1, Tier o2) {
 						return o2.lebensenergie - o1.lebensenergie;
-						if (o1.lebensenergie < o2.lebensenergie) {
+//						if (o1.lebensenergie < o2.lebensenergie) {
 //							return 1;
 //						} else if (o1.lebensenergie == o2.lebensenergie) {
 //							return 0;
