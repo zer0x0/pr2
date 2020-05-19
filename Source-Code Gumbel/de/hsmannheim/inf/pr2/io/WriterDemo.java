@@ -1,6 +1,9 @@
 package de.hsmannheim.inf.pr2.io;
 
-import java.io.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.io.Writer;
 
 /**
  * @author Markus Gumbel (m.gumbel@hs-mannheim.de)

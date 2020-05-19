@@ -1,6 +1,8 @@
 package de.hsmannheim.inf.pr2.ads.sort;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * Ein direkter 2-Wege MergeSort, simuliert mit Arrays.

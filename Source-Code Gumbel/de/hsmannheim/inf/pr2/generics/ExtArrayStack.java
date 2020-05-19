@@ -1,7 +1,8 @@
 package de.hsmannheim.inf.pr2.generics;
 
-import de.hsmannheim.inf.pr2.ads.ArrayStack;
 import java.util.Collection;
+
+import de.hsmannheim.inf.pr2.ads.ArrayStack;
 
 /**
  * Eine einfache Erweiterung eines ArrayStack,

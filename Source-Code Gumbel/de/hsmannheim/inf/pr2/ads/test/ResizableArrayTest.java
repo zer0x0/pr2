@@ -1,10 +1,11 @@
 package de.hsmannheim.inf.pr2.ads.test;
 
-import de.hsmannheim.inf.pr2.ads.ResizableArray;
-import org.junit.Test;
-
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
+
+import org.junit.Test;
+
+import de.hsmannheim.inf.pr2.ads.ResizableArray;
 
 /**
  * Testfälle für das ResizableArray.

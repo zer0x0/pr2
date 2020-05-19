@@ -3,9 +3,10 @@ package de.hsmannheim.inf.pr2.object.test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Test;
+
 import de.hsmannheim.inf.pr2.object.Ork;
 import de.hsmannheim.inf.pr2.object.Wesen;
-import org.junit.Test;
 
 /**
  * Testklasse für die Wesen.

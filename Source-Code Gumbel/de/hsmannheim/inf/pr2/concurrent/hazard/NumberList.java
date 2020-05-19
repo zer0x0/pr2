@@ -1,7 +1,6 @@
 package de.hsmannheim.inf.pr2.concurrent.hazard;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**

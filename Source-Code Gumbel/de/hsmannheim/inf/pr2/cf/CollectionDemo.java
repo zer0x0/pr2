@@ -1,8 +1,19 @@
 package de.hsmannheim.inf.pr2.cf;
 
-import de.hsmannheim.inf.pr2.object.Person;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+
+import de.hsmannheim.inf.pr2.object.Person;
 
 /**
  * @author Markus Gumbel (m.gumbel@hs-mannheim.de)

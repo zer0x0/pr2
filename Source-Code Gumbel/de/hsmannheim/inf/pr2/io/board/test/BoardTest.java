@@ -3,9 +3,10 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 
+import org.junit.Test;
+
 import de.hsmannheim.inf.pr2.io.board.Board;
 import de.hsmannheim.inf.pr2.io.board.Color;
-import org.junit.Test;
 
 /**
  * Test.

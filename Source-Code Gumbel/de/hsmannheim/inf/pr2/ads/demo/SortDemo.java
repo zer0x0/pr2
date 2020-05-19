@@ -1,13 +1,13 @@
 package de.hsmannheim.inf.pr2.ads.demo;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
 import de.hsmannheim.inf.pr2.ads.sort.BubbleSort;
 import de.hsmannheim.inf.pr2.ads.sort.InsertionSort;
 import de.hsmannheim.inf.pr2.ads.sort.SelectionSort;
 import de.hsmannheim.inf.pr2.ads.sort.Sort;
-
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
 
 /**
  * Hier werden Integer-Zahlen und Strings mit den besprochenen

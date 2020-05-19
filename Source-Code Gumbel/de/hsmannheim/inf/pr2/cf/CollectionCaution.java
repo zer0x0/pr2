@@ -1,7 +1,12 @@
 package de.hsmannheim.inf.pr2.cf;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
 import de.hsmannheim.inf.pr2.object.Person;
-import java.util.*;
 
 /**
  * @author Markus Gumbel (m.gumbel@hs-mannheim.de)
