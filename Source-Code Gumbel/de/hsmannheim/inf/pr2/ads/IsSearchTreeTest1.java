@@ -8,18 +8,6 @@ class IsSearchTreeTest1 {
 
 	@Test
 	public void testIsSearchTree() {
-        AVLTreeNode<Integer> istSearchTree = 
-                new AVLTreeNode<Integer>(27,
-                        new TreeNode<Integer>(14, 
-                                new TreeNode<Integer>(10),
-                                new TreeNode<Integer>(19)),
-
-                        new TreeNode<Integer>(35, 
-                                new TreeNode<Integer>(31), 
-
-                                new TreeNode<Integer>(42) 
-                                ));
-
         AVLTreeNode<Integer> isSearchTree = 
                 new AVLTreeNode<Integer>(2,
                         new TreeNode<Integer>(1), 
@@ -58,6 +46,7 @@ AVLTreeNode<Integer> keinSearchTree =
                                         new TreeNode<Integer>(8))));
 
 
+        assertEquals(true, isSearchTree.isSearchTree());
         assertEquals(true, isSearchTree.isSearchTree());
         assertEquals(false, noSearchTree.isSearchTree());
         assertEquals(false, keinSearchTree.isSearchTree());
