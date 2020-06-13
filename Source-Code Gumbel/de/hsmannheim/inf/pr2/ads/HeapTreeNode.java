@@ -4,21 +4,19 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class HeapTreeNode<E extends Comparable<E>> extends TreeNode<E> implements Iterable<E> {
+	
 	/*
-	 * E - bedeutet, dass die Klasse generisch ist und Comparable - macht die Klasse
-	 * "bounded" ist
-	 * 
+	 * E oder T - bedeutet, dass die Klasse generisch ist und Comparable - macht die
+	 * Klasse "bounded" ist.
 	 */
 
 	public HeapTreeNode(E value, TreeNode<E> left, TreeNode<E> right) {
 		super(value, left, right);
-
 	}
 
 	boolean isMinHeapTree(HeapTreeNode<E> n) {
 		int i = 0;
 		return isHeap(n, i, size(n));
-
 	}
 
 	private boolean isHeap(TreeNode<E> root, int i, int n) {
@@ -28,19 +26,16 @@ public class HeapTreeNode<E extends Comparable<E>> extends TreeNode<E> implement
 		if (i >= n) {
 			return false;
 		}
-
 		if ((root.left != null && root.left.value.compareTo(root.value) < 0)
 				|| (root.right != null && root.right.value.compareTo(root.value) < 0)) {
 			return false;
 		}
-
 		return isHeap(root.left, 2 * i + 1, n) && isHeap(root.right, 2 * i + 2, n);
 	}
 
 	boolean isMaxHeapTree(HeapTreeNode<E> n) {
 		int i = 0;
 		return isMaxHeap(n, i, size(n));
-
 	}
 
 	int size(HeapTreeNode<E> e) {
@@ -57,12 +52,10 @@ public class HeapTreeNode<E extends Comparable<E>> extends TreeNode<E> implement
 		if (i >= n) {
 			return false;
 		}
-
 		if ((root.left != null && root.left.value.compareTo(root.value) > 0)
 				|| (root.right != null && root.right.value.compareTo(root.value) > 0)) {
 			return false;
 		}
-
 		return isMaxHeap(root.left, 2 * i + 1, n) && isMaxHeap(root.right, 2 * i + 2, n);
 	}
 
@@ -84,8 +77,9 @@ public class HeapTreeNode<E extends Comparable<E>> extends TreeNode<E> implement
 	}
 
 	/*
-	 * A6
+	 * Aufgabe 6
 	 */
+
 	@Override
 	public Iterator<E> iterator() {
 		return new ArrayIterator<E>(heapToList(this));
