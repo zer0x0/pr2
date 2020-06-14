@@ -11,7 +11,7 @@ package de.hsmannheim.inf.pr2.ads;
  */
 
 /*
- * ermöglicht aufruf der Klasse mit unterschiedlichen Param Typen 
+ * Ermöglicht aufruf der Klasse mit unterschiedlichen Param Typen 
  * extends Comparable Interface
  */
 
