@@ -33,6 +33,11 @@ public class HeapTreeNode<E extends Comparable<E>> extends TreeNode<E> implement
 		return isHeap(root.left, 2 * i + 1, n) && isHeap(root.right, 2 * i + 2, n);
 	}
 
+	
+	/*
+	 * Aufgabe 4
+	 */
+	
 	boolean isMaxHeapTree(HeapTreeNode<E> n) {
 		int i = 0;
 		return isMaxHeap(n, i, size(n));

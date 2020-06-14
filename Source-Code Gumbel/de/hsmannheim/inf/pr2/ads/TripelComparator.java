@@ -2,18 +2,34 @@ package de.hsmannheim.inf.pr2.ads;
 
 import java.util.Comparator;
 
-public class TripelComparator<A extends Comparable<A>, B extends Comparable<B>, C extends Comparable<C>>
-		implements Comparator<Tripel<A, B, C>> {
-	private final int zahl;
+/**
+ * PÜ4 - Aufgabe 1
+ * 
+ * @author zer0x0
+ *
+ * @param <U>
+ * @param <V>
+ * @param <W>
+ */
 
-	public TripelComparator(final int zahl) {
+public class TripelComparator<U extends Comparable<U>, V extends Comparable<V>, W extends Comparable<W>>
+		implements Comparator<Tripel<U, W, V>> {
+
+	int zahl;
+
+	public TripelComparator(int zahl) {
 		this.zahl = zahl;
 	}
 
-	@Override
-	public int compare(Tripel<A, B, C> x, Tripel<A, B, C> y) {
-		switch (zahl) {
+	public static void main(String[] args) {
+		int zahl = (int)(Math.random()*6)+1;
+        final Comparator<Tripel<Integer,Integer,Integer>> cmp = new TripelComparator<Integer,Integer,Integer>(zahl);
 
+	}
+
+	@Override
+	public int compare(Tripel<U, W, V> x, Tripel<U, W, V> y) {
+		switch (zahl) {
 		case 1:
 			if (x.u.compareTo(y.u) == 1) {
 				return 1;
@@ -94,7 +110,6 @@ public class TripelComparator<A extends Comparable<A>, B extends Comparable<B>, 
 					}
 				}
 			}
-
 		case 5:
 			if (x.w.compareTo(y.w) == 1) {
 				return 1;
@@ -137,8 +152,9 @@ public class TripelComparator<A extends Comparable<A>, B extends Comparable<B>, 
 				}
 			}
 		default:
-			System.out.println("Geht nicht");
+			System.out.println(3634);
 		}
 		return 0;
 	}
+
 }
