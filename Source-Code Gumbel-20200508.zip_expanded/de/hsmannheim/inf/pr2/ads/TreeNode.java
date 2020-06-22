@@ -1,19 +1,19 @@
 package de.hsmannheim.inf.pr2.ads;
 
 /**
- * Ein Knoten f¸r einen Bin‰rbaum.
- * Dieser Knoten kann selbst als eigener Bin‰rbaum aufgefasst werden.
+ * Ein Knoten f√ºr einen Bin√§rbaum. Dieser Knoten kann selbst als eigener
+ * Bin√§rbaum aufgefasst werden.
  *
  * @author Markus Gumbel (m.gumbel@hs-mannheim.de)
  */
 public class TreeNode<E> {
 
-	protected E value = null;           // Wert des Knotens.
-	protected TreeNode<E> left = null;  // Linker Teilbaum.
+	protected E value = null; // Wert des Knotens.
+	protected TreeNode<E> left = null; // Linker Teilbaum.
 	protected TreeNode<E> right = null; // Rechter Teilbaum.
 
 	/**
-	 * Erzeuge einen neuen Bin‰rbaum-Knoten. Nachfolger und Vorg‰nger sind nicht
+	 * Erzeuge einen neuen Bin√§rbaum-Knoten. Nachfolger und Vorg√§nger sind nicht
 	 * gesetzt.
 	 *
 	 * @param v Der Wert des Knotens.
@@ -24,9 +24,10 @@ public class TreeNode<E> {
 	}
 
 	/**
-	 * Erzeuge einen neuen Bin‰rbaum(-Knoten), entspricht tree().
+	 * Erzeuge einen neuen Bin√§rbaum(-Knoten), entspricht tree().
+	 * 
 	 * @param value Der Wert des Knotens.
-	 * @param left Der linke Teilbaum.
+	 * @param left  Der linke Teilbaum.
 	 * @param right Der rechte Teilbaum.
 	 */
 	public TreeNode(E value, TreeNode<E> left, TreeNode<E> right) {
@@ -78,8 +79,7 @@ public class TreeNode<E> {
 	}
 
 	/**
-	 * Gibt den Baum ab dem Wurzelknoten in Inorder-Reihenfolge
-	 * auf die Konsole aus.
+	 * Gibt den Baum ab dem Wurzelknoten in Inorder-Reihenfolge auf die Konsole aus.
 	 */
 	public void printInorder() {
 		printInorder(this);
@@ -87,8 +87,8 @@ public class TreeNode<E> {
 	}
 
 	/**
-	 * Durchl‰uft einen (Teil-)Baum vom Wurzelknoten an in
-	 * Inorder-Reihenfolge und gibt die Werte auf die Konsole aus.
+	 * Durchl√§uft einen (Teil-)Baum vom Wurzelknoten an in Inorder-Reihenfolge und
+	 * gibt die Werte auf die Konsole aus.
 	 *
 	 * @param node Wurzelknoten des (Teil-)Baums
 	 */
@@ -100,42 +100,44 @@ public class TreeNode<E> {
 			printInorder(node.getRight());
 		}
 	}
+
 	/**
-	 * Ermittelt ob zwei B‰ume identisch zueinander sind 
+	 * Ermittelt ob zwei B√§ume identisch zueinander sind
+	 * 
 	 * @param otherNode Baum der verlichen werden soll
-	 * @return wahr wenn die B‰ume indentisch sind 
+	 * @return wahr wenn die B√§ume indentisch sind
 	 */
 	public boolean equalStructure(TreeNode<E> otherNode) {
 
 		TreeNode<E> current = this;
-		TreeNode<E> current2 = this; 
-		if(otherNode == null) {
+		TreeNode<E> current2 = this;
+		if (otherNode == null) {
 			return false;
-		}else if(current.getValue() == null && otherNode.getValue() == null) {
+		} else if (current.getValue() == null && otherNode.getValue() == null) {
 			return true;
 		}
-		while((otherNode != null && current != null) && otherNode.getValue() == current.getValue()) {
-			current = current.getLeft(); 
-			otherNode = otherNode.getLeft(); 
-			if(otherNode == null)
+		while ((otherNode != null && current != null) && otherNode.getValue() == current.getValue()) {
+			current = current.getLeft();
+			otherNode = otherNode.getLeft();
+			if (otherNode == null)
 				return true;
 
-			while((otherNode != null && current2 != null) && otherNode.getValue() == current2.getValue()) {
-				current2 = current2.getRight(); 
-				otherNode = otherNode.getRight(); 
+			while ((otherNode != null && current2 != null) && otherNode.getValue() == current2.getValue()) {
+				current2 = current2.getRight();
+				otherNode = otherNode.getRight();
 
-				if(otherNode == null) 
+				if (otherNode == null)
 					return true;
 			}
 		}
 		return false;
 	}
 
-	//	
+	//
 	/**
-	 * Bestimme die Hˆhe des Baums.
+	 * Bestimme die H√∂he des Baums.
 	 *
-	 * @return Hˆhe des Baums
+	 * @return H√∂he des Baums
 	 */
 	public int height() {
 		if (value == null)
@@ -157,36 +159,38 @@ public class TreeNode<E> {
 
 		TreeNode<Integer> t2 = new TreeNode<Integer>(1, new TreeNode<Integer>(2), new TreeNode<Integer>(3));
 		TreeNode<Integer> t4 = new TreeNode<Integer>(1, new TreeNode<Integer>(2), new TreeNode<Integer>(3));
-		TreeNode<Integer> t3 = new TreeNode<Integer>(4, new TreeNode<Integer>(2), new TreeNode<Integer>(3, new TreeNode<Integer>(5), new TreeNode<Integer>(8)));
-		TreeNode<Integer> t1 = new TreeNode<Integer>(1); 
-		//		t1.left = new TreeNode<Integer>(2); 
-		//		t1.right = new TreeNode<Integer>(3); 
-		//		TreeNode<Integer> t4 = new TreeNode<Integer>(5); 
-		//		t4.left = new TreeNode<Integer>(6); 
-		//		t4.right = new TreeNode<Integer>(8); 
-		//		TreeNode<Integer> t2 = new TreeNode<Integer>(1); 
-		//		t2.left = new TreeNode<Integer>(2); 
-		//		t2.right = new TreeNode<Integer>(3); 
-		//		TreeNode<Integer> t2 = new TreeNode<Integer>(1, new TreeNode<Integer>(2), new TreeNode<Integer>(3));
+		TreeNode<Integer> t3 = new TreeNode<Integer>(4, new TreeNode<Integer>(2),
+				new TreeNode<Integer>(3, new TreeNode<Integer>(5), new TreeNode<Integer>(8)));
+		TreeNode<Integer> t1 = new TreeNode<Integer>(1);
+		// t1.left = new TreeNode<Integer>(2);
+		// t1.right = new TreeNode<Integer>(3);
+		// TreeNode<Integer> t4 = new TreeNode<Integer>(5);
+		// t4.left = new TreeNode<Integer>(6);
+		// t4.right = new TreeNode<Integer>(8);
+		// TreeNode<Integer> t2 = new TreeNode<Integer>(1);
+		// t2.left = new TreeNode<Integer>(2);
+		// t2.right = new TreeNode<Integer>(3);
+		// TreeNode<Integer> t2 = new TreeNode<Integer>(1, new TreeNode<Integer>(2), new
+		// TreeNode<Integer>(3));
 
 		t1.printInorder();
 		t2.printInorder();
-		System.out.println(t2.equalStructure(t4)); 
-		System.out.println(t1.equalStructure(t3)); 
-		System.out.println(t1.equalStructure(t1)); 
+		System.out.println(t2.equalStructure(t4));
+		System.out.println(t1.equalStructure(t3));
+		System.out.println(t1.equalStructure(t1));
 //		System.out.println(t3.mkString());
 	}
-	
+
 	public int balance() {
-	    var leftHeight = 0;
-	    var rightHeight = 0;
-	    if (this.left != null) {
-	        leftHeight = this.left.height();
-	    }
-	    if (this.right != null) {
-	        rightHeight = this.right.height();
-	    }
-	    return leftHeight - rightHeight;
+		var leftHeight = 0;
+		var rightHeight = 0;
+		if (this.left != null) {
+			leftHeight = this.left.height();
+		}
+		if (this.right != null) {
+			rightHeight = this.right.height();
+		}
+		return leftHeight - rightHeight;
 	}
 
 //	public String mkString() {
@@ -211,5 +215,4 @@ public class TreeNode<E> {
 //			list.addFirst(n.getValue()); 
 //			sort1(n.getRight(),list);
 //		}
-	}
-
+}

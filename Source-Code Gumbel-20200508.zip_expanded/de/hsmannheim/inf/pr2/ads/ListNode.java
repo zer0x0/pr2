@@ -1,8 +1,8 @@
 package de.hsmannheim.inf.pr2.ads;
 
 /**
- * Ein Knoten einer verketteten Liste, der beliebige Elemente
- * aufnehmen kann.
+ * Ein Knoten einer verketteten Liste, der beliebige Elemente aufnehmen kann.
+ * 
  * @author Markus Gumbel (m.gumbel@hs-mannheim.de)
  */
 public class ListNode<E> {
@@ -29,7 +29,6 @@ public class ListNode<E> {
 		next = n;
 	}
 
-
 	/**
 	 * Erzeugt einen neuen Knoten (neue Liste).
 	 *
@@ -38,9 +37,6 @@ public class ListNode<E> {
 	public ListNode(E value) {
 		this.value = value;
 	}
-
-
-
 
 	/**
 	 * @return Den Wert des ersten Knotens der Liste.
@@ -52,13 +48,12 @@ public class ListNode<E> {
 	/**
 	 * @return Die Restliste.
 	 */
-	public ListNode<E>  getTail() {
+	public ListNode<E> getTail() {
 		return next;
 	}
 
 	/**
-	 * Erzeugt einen neuen Listenknoten und lässt ihn auf diese
-	 * Liste zeigen.
+	 * Erzeugt einen neuen Listenknoten und lÃ¤sst ihn auf diese Liste zeigen.
 	 *
 	 * @param value Wert des neuen Listenknotens.
 	 * @return Die neue Liste mit neuem Knoten am Anfang.
@@ -66,7 +61,6 @@ public class ListNode<E> {
 	public ListNode<E> addFirst(E value) {
 		return new ListNode<>(value, this);
 	}
-
 
 	/**
 	 * @return Die Anzahl der Elemente in der Liste.
@@ -87,10 +81,12 @@ public class ListNode<E> {
 	}
 
 	public String toString() {
-		return value + ""; 
+		return value + "";
 	}
+
 	/**
 	 * Gibt die Liste als String aus in Klammern mit Komma
+	 * 
 	 * @return text
 	 */
 	public String toListString() {
@@ -101,17 +97,17 @@ public class ListNode<E> {
 			p = p.getTail();
 
 		}
-		text += p.toString(); 
+		text += p.toString();
 
 		return "(" + text + ") ";
 	}
 
-
 	public static void main(String[] args) {
 		List<String> zeichenKetten = new List<String>("Hallo");
-		List<Integer> intZahlen = new List<Integer>(1); 
+		List<Integer> intZahlen = new List<Integer>(1);
 		intZahlen.addLast(1);
 		intZahlen.addLast(2);
+		intZahlen.addLast(3);
 		intZahlen.addLast(5);
 		intZahlen.addLast(8);
 
@@ -119,47 +115,43 @@ public class ListNode<E> {
 		zeichenKetten.addLast("das");
 		zeichenKetten.addLast("Wetter");
 		zeichenKetten.addLast("ist");
-		zeichenKetten.addLast("schön");
+		zeichenKetten.addLast("schÃ¶n");
 
 		System.out.println(zeichenKetten.toListString());
 		System.out.println(intZahlen.toListString());
 		System.out.println(intZahlen.contains(1));
-		System.out.println(zeichenKetten.containsIter("Hallo")); 
+		System.out.println(zeichenKetten.containsIter("Hallo"));
 	}
+
 	/**
-	 * Überprüft, ob der Wert <code>e</code> in der Liste
-	 * enthalten ist.
+	 * ÃœberprÃ¼ft, ob der Wert <code>e</code> in der Liste enthalten ist.
 	 *
 	 * @param e Suchwert (int, String, etc.)
-	 * @return return true wenn Wert gefunden wurde
-	 * false wenn nicht
+	 * @return return true wenn Wert gefunden wurde false wenn nicht
 	 */
 	public boolean containsIter(E e) {
 		ListNode<E> current = this;
-		while(current!=null) {
-			if(current.getHead()==e) {
+		while (current != null) {
+			if (current.getHead() == e) {
 				return true;
 			}
 			current = current.getTail();
 		}
 		return false;
 	}
+
 	/**
-	 * Überprüft, ob der Wert in <code>e</code> in der Liste
-	 * enthalten ist.
+	 * ÃœberprÃ¼ft, ob der Wert in <code>e</code> in der Liste enthalten ist.
 	 * 
 	 * @param e Suchwert (int, String, etc.)
-	 * @return true wenn Wert gefunden wurde
-	 * false wenn nicht
+	 * @return true wenn Wert gefunden wurde false wenn nicht
 	 */
 	public boolean contains(E e) {
-		if(this.getHead().equals(e)) {
+		if (this.getHead().equals(e)) {
 			return true;
-		} else if(getTail()!=null) {
+		} else if (getTail() != null) {
 			return getTail().contains(e);
-		} return false;
+		}
+		return false;
 	}
 }
-
-
-
