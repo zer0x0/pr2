@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Test;
 
 class ListNodeTest {
 
+	/**
+	 * PÜ3 - Aufgabe 2
+	 */
 	@Test
 	void testcontainsIter() {
 		List<String> zeichenKetten = new List<String>("Hallo");
@@ -29,6 +32,9 @@ class ListNodeTest {
 		// assertTrue(zeichenKetten.containsIter("Pro"));
 	}
 
+	/**
+	 * PÜ3 - Aufgabe 3
+	 */
 	@Test
 	void testcontains() {
 		List<String> zeichenKetten = new List<String>("Hallo");

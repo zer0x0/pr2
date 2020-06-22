@@ -141,7 +141,8 @@ public class ListNode<E> {
 	}
 
 	/**
-	 * Überprüft, ob der Wert in <code>e</code> in der Liste enthalten ist.
+	 * Überprüft, ob der Wert in <code>e</code> in der Liste enthalten ist. Rekursiv
+	 * weil wieder aufgerufen in der Funktion bei return getTail().contains(e);
 	 * 
 	 * @param e Suchwert (int, String, etc.)
 	 * @return true wenn Wert gefunden wurde false wenn nicht

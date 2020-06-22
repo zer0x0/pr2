@@ -8,6 +8,9 @@ import org.junit.jupiter.api.Test;
 
 class TreeNodeTest {
 
+	/**
+	 * PÜ3 - Aufgabe 6
+	 */
 	@Test
 	void isEmptytest() {
 		SearchTree<Integer> t1 = new SearchTree<>();
@@ -17,6 +20,9 @@ class TreeNodeTest {
 
 	}
 
+	/**
+	 * PÜ3 - Aufgabe 6
+	 */
 	@Test
 	void isEmptytest2() {
 		SearchTree<Integer> t2 = new SearchTree<>();
@@ -29,6 +35,9 @@ class TreeNodeTest {
 		assertFalse(ts2.isEmpty());
 	}
 
+	/**
+	 * PÜ3 - Aufgabe 6
+	 */
 	@Test
 	void isEmptytest3() {
 		SearchTree<Integer> t3 = new SearchTree<>();
@@ -43,6 +52,9 @@ class TreeNodeTest {
 		assertTrue(ts3.isEmpty());
 	}
 
+	/**
+	 * PÜ3 - Aufgabe 7
+	 */
 	@Test
 	void clear() {
 		SearchTree<Integer> t3 = new SearchTree<>();
@@ -57,6 +69,9 @@ class TreeNodeTest {
 		assertTrue(ts3.isEmpty());
 	}
 
+	/**
+	 * PÜ3 - Aufgabe 9
+	 */
 	@Test
 	void containsRek() {
 		SearchTree<Integer> t4 = new SearchTree<>();
@@ -64,7 +79,7 @@ class TreeNodeTest {
 		t4.add(83);
 		t4.add(25);
 		ts4.add("Welt");
-		ts4.add("sch�n");
+		ts4.add("schön");
 		assertTrue(t4.contains(25));
 		assertTrue(t4.contains(83));
 		assertFalse(t4.contains(5));
@@ -76,6 +91,9 @@ class TreeNodeTest {
 
 	}
 
+	/**
+	 * PÜ3 - Aufgabe 8
+	 */
 	@Test
 	void heightTest() {
 		SearchTree<Integer> t = new SearchTree<Integer>();
@@ -101,6 +119,9 @@ class TreeNodeTest {
 		assertEquals(1, t7.height());
 	}
 
+	/**
+	 * PÜ3 - Aufgabe 5
+	 */
 	@Test
 	void equalStructureTest() {
 		TreeNode<Integer> t1 = new TreeNode<Integer>(1, new TreeNode<Integer>(2), new TreeNode<Integer>(3));
