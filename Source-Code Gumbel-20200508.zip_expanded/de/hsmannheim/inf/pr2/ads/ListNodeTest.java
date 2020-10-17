@@ -13,7 +13,7 @@ class ListNodeTest {
 	@Test
 	void testcontainsIter() {
 		List<String> zeichenKetten = new List<String>("Hallo");
-		List<Integer> intZahlen = new List<Integer>(1);
+		ListNode<Integer> intZahlen = new List<Integer>(1);
 		intZahlen.addLast(1);
 		intZahlen.addLast(2);
 		intZahlen.addLast(5);
