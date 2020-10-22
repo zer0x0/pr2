@@ -10,6 +10,7 @@ public class Hase extends Tier {
 	 * Hasen-Konstruktor erbt von Tier-Klasse lebensenergie "super()" wird auf 40
 	 * gesetzt
 	 */
+
 	protected Hase() {
 		lebensenergie = 40;
 		// super();
